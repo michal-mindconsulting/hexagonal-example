@@ -150,3 +150,12 @@ class UserRepository extends Repository implements UserRepositoryInterface
 }
 
 ```
+
+Binding in ServiceProvider
+
+```php
+public function register()
+{
+    $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
+}
+```
